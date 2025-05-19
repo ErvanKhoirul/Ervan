@@ -57,7 +57,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{asset('pages/tables.html">
+          <a class="nav-link text-white " href="{{asset('pages/tables.html')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -65,7 +65,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{asset('pages/billing.html">
+          <a class="nav-link text-white " href="{{asset('pages/billing.html')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
@@ -73,7 +73,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{asset('pages/virtual-reality.html">
+          <a class="nav-link text-white " href="{{asset('pages/virtual-reality.html')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">view_in_ar</i>
             </div>
@@ -81,7 +81,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{asset('pages/rtl.html">
+          <a class="nav-link text-white " href="{{asset('pages/rtl.html')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
             </div>
@@ -89,7 +89,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{asset('pages/notifications.html">
+          <a class="nav-link text-white " href="{{asset('pages/notifications.html')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">notifications</i>
             </div>
@@ -100,7 +100,7 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{asset('pages/profile.html">
+          <a class="nav-link text-white " href="{{asset('pages/profile.html')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">person</i>
             </div>
@@ -108,7 +108,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{asset('pages/sign-in.html">
+          <a class="nav-link text-white " href="{{asset('pages/sign-in.html')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">login</i>
             </div>
@@ -116,7 +116,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{asset('pages/sign-up.html">
+          <a class="nav-link text-white " href="{{asset('pages/sign-up.html')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">assignment</i>
             </div>
@@ -179,7 +179,7 @@
                   <a class="dropdown-item border-radius-md" href="javascript:;">
                     <div class="d-flex py-1">
                       <div class="my-auto">
-                        <img src="{{asset('assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
+                        <img src="{{asset('assets/img/team-2.jpg')}}" class="avatar avatar-sm  me-3 ">
                       </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
@@ -197,7 +197,7 @@
                   <a class="dropdown-item border-radius-md" href="javascript:;">
                     <div class="d-flex py-1">
                       <div class="my-auto">
-                        <img src="{{asset('assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                        <img src="{{asset('assets/img/small-logos/logo-spotify.svg')}}" class="avatar avatar-sm bg-gradient-dark  me-3 ">
                       </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
@@ -423,7 +423,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets/img/small-logos/logo-xd.svg" class="avatar avatar-sm me-3" alt="xd">
+                            <img src="{{asset('assets/img/small-logos/logo-xd.svg')}}" class="avatar avatar-sm me-3" alt="xd">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Material XD Version</h6>
@@ -433,16 +433,16 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-                            <img src="{{asset('assets/img/team-1.jpg" alt="team1">
+                            <img src="{{asset('assets/img/team-1.'jpg')}}" alt="team1">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-                            <img src="{{asset('assets/img/team-2.jpg" alt="team2">
+                            <img src="{{asset('assets/img/team-2.'jpg')}}" alt="team2">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alexander Smith">
-                            <img src="{{asset('assets/img/team-3.jpg" alt="team3">
+                            <img src="{{asset('assets/img/team-3.'jpg')}}" alt="team3">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img src="{{asset('assets/img/team-4.jpg" alt="team4">
+                            <img src="{{asset('assets/img/team-4.'jpg')}}" alt="team4">
                           </a>
                         </div>
                       </td>
@@ -466,7 +466,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets/img/small-logos/logo-atlassian.svg" class="avatar avatar-sm me-3" alt="atlassian">
+                            <img src="{{asset('assets/img/small-logos/logo-atlassian.svg')}}" class="avatar avatar-sm me-3" alt="atlassian">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Add Progress Track</h6>
@@ -476,10 +476,10 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-                            <img src="{{asset('assets/img/team-2.jpg" alt="team5">
+                            <img src="{{asset('assets/img/team-2.jpg')}}" alt="team5">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img src="{{asset('assets/img/team-4.jpg" alt="team6">
+                            <img src="{{asset('assets/img/team-4.jpg')}}" alt="team6">
                           </a>
                         </div>
                       </td>
@@ -503,7 +503,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets/img/small-logos/logo-slack.svg" class="avatar avatar-sm me-3" alt="team7">
+                            <img src="{{asset('assets/img/small-logos/logo-slack.svg')}}" class="avatar avatar-sm me-3" alt="team7">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Fix Platform Errors</h6>
@@ -513,10 +513,10 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-                            <img src="{{asset('assets/img/team-3.jpg" alt="team8">
+                            <img src="{{asset('assets/img/team-3.jpg')}}" alt="team8">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img src="{{asset('assets/img/team-1.jpg" alt="team9">
+                            <img src="{{asset('assets/img/team-1.jpg')}}" alt="team9">
                           </a>
                         </div>
                       </td>
@@ -540,7 +540,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm me-3" alt="spotify">
+                            <img src="{{asset('assets/img/small-logos/logo-spotify.svg')}}" class="avatar avatar-sm me-3" alt="spotify">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Launch our Mobile App</h6>
@@ -550,16 +550,16 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-                            <img src="{{asset('assets/img/team-4.jpg" alt="user1">
+                            <img src="{{asset('assets/img/team-4.jpg')}}" alt="user1">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-                            <img src="{{asset('assets/img/team-3.jpg" alt="user2">
+                            <img src="{{asset('assets/img/team-3.jpg')}}" alt="user2">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alexander Smith">
-                            <img src="{{asset('assets/img/team-4.jpg" alt="user3">
+                            <img src="{{asset('assets/img/team-4.jpg')}}" alt="user3">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img src="{{asset('assets/img/team-1.jpg" alt="user4">
+                            <img src="{{asset('assets/img/team-1.jpg')}}" alt="user4">
                           </a>
                         </div>
                       </td>
@@ -583,7 +583,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets/img/small-logos/logo-jira.svg" class="avatar avatar-sm me-3" alt="jira">
+                            <img src="{{asset('assets/img/small-logos/logo-jira.svg')}}" class="avatar avatar-sm me-3" alt="jira">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Add the New Pricing Page</h6>
@@ -593,7 +593,7 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-                            <img src="{{asset('assets/img/team-4.jpg" alt="user5">
+                            <img src="{{asset('assets/img/team-4.jpg')}}" alt="user5">
                           </a>
                         </div>
                       </td>
@@ -617,7 +617,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets/img/small-logos/logo-invision.svg" class="avatar avatar-sm me-3" alt="invision">
+                            <img src="{{asset('assets/img/small-logos/logo-invision.svg')}}" class="avatar avatar-sm me-3" alt="invision">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Redesign New Online Shop</h6>
@@ -627,10 +627,10 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-                            <img src="{{asset('assets/img/team-1.jpg" alt="user6">
+                            <img src="{{asset('assets/img/team-1.jpg')}}" alt="user6">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img src="{{asset('assets/img/team-4.jpg" alt="user7">
+                            <img src="{{asset('assets/img/team-4.jpg')}}" alt="user7">
                           </a>
                         </div>
                       </td>
@@ -841,11 +841,11 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="{{asset('assets/js/core/popper.min.js"></script>
-  <script src="{{asset('assets/js/core/bootstrap.min.js"></script>
-  <script src="{{asset('assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="{{asset('assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script src="{{asset('assets/js/plugins/chartjs.min.js"></script>
+  <script src="{{asset('assets/js/core/popper.min.js')}}"></script>
+  <script src="{{asset('assets/js/core/bootstrap.min.js')}}"></script>
+  <script src="{{asset('assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
+  <script src="{{asset('assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
+  <script src="{{asset('assets/js/plugins/chartjs.min.js')}}"></script>
   <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -1105,7 +1105,7 @@
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="{{asset('assets/js/material-dashboard.min.js?v=3.0.0"></script>
+  <script src="{{asset('assets/js/material-dashboard.min.js?v=3.0.0')}}"></script>
 </body>
 
 </html>

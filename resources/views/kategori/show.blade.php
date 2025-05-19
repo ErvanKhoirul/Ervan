@@ -1,17 +1,5 @@
-<body>
-
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            {{-- NAVBAR --}}
-            @include('layouts.components.header')
-            {{-- /NAVBAR --}}
-
-            {{-- SIDEBAR --}}
-            @include('layouts.components.sidebar')
-            {{-- /SIDEBAR --}}
-        </nav>
+@extends('layouts.dashboard')
+@section('content')
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -57,4 +45,4 @@
         <!-- /#page-wrapper -->
 
     </div>
-    <!-- /#wrapper -->
+   @endsection

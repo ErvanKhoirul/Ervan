@@ -1,25 +1,20 @@
+@extends('layouts.dashboard')
+@section('content')
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Produk</h1>
 
-<body>
-
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            {{-- NAVBAR --}}
-            @include('layouts.components.header')
-            {{-- /NAVBAR --}}
-        </nav>
-        {{-- SIDEBAR --}}
-        @include('layouts.components.sidebar')
-        {{-- /SIDEBAR --}}
-        </aside>
-        <!-- /.sidebar -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
 
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Edit Pendaftaran</h1>
+                        <h1 class="page-header">Edit Produk</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -27,7 +22,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Edit Pendaftaran
+                            Edit Produk
                         </div>
                         <!-- /.panel-heading -->
                         <div class="card-body">
@@ -54,6 +49,25 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                <div class="form-group">   
+                                    <label>Id Merek</label>
+                                        <select class="form-control" name="id_merek">
+                                        @foreach($merek as $data)
+                                            <option value="{{ $data->id }}">{{ $data->nama_merek }}</option>
+                                        @endforeach
+                                        </select>
+                                </div>
+                                 <div class="mb-2">
+                                                <label for="">Tambah Foto</label>
+                                                <input type="file" name="foto" id="" class="form-control @error('foto') is-invalid @enderror">
+                                                @error('produk')
+                                                <div class="invalid-feedback">{{$message}}</div>
+                                                @enderror
+                                  </div>
+                                  <div class="form-group">
+                                    <label>Deskripsi</label>
+                                        <input type="text" class="form-control" name="deskripsi">
+                                   </div>
                                 <br>
                                 <button type="submit" class="btn btn-primary">Edit</button>
                             </form>
@@ -71,3 +85,4 @@
         <!-- /#page-wrapper -->
 
     </div>
+    @endsection

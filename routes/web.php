@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\MerekController;
+use App\Http\Controllers\FrontController;
+use App\Models\Produk;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,17 +18,17 @@ use App\Http\Controllers\MerekController;
 */
 
 Auth::routes();
-Route::get('/', function () {
-});    
-Route::get('/', function () {
-     return view('welcome');
-    });
-//crud
+Route::get('/', [FrontController::class, 'index']); 
+
 //Role admin
 Route::prefix('admin')->middleware('auth')->group(function () {
+
 Route::resource('kategori',KategoriController::class);
 Route::resource('produk',ProdukController::class);
 Route::resource('merek',MerekController::class);
+Route::get('/',function(){
+    return view('admin.index');
+});
 });
 
 

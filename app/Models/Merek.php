@@ -9,7 +9,7 @@ class Merek extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'nama_merek'];
+    protected $fillable = ['nama_merek'];
     public $timestamp = true;
 
     public function produk()

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Merek;
+use Illuminate\Http\Request;
 
-class MerkController extends Controller
+class MerekController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class MerkController extends Controller
      */
     public function index()
     {
-        $merek = Merek::latest();
-        return view('merk.index',compact('merk')); 
+        $merek = Merek::latest()->get();
+        return view('merek.index',compact('merek')); 
     }
 
     /**
@@ -25,7 +25,7 @@ class MerkController extends Controller
      */
     public function create()
     {
-        return view('merk.create'); 
+        return view('merek.create'); 
     }
 
     /**
@@ -36,13 +36,17 @@ class MerkController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+       'nama_merek' => 'required|unique:mereks',
+       ]);
+
         $merek = new Merek;
         $merek->nama_merek = $request->nama_merek;
        
         $merek->save();
         session()->flash('success', 'Data berhasil di tambahkan');
 
-        return redirect()->route('merk.index'); 
+        return redirect()->route('merek.index'); 
     }
 
     /**
@@ -54,7 +58,7 @@ class MerkController extends Controller
     public function show($id)
     {
         $merek = Merek::findOrFail($id);
-        return view('merk.show', compact('merek'));
+        return view('merek.show', compact('merek'));
     }
 
     /**
@@ -66,7 +70,7 @@ class MerkController extends Controller
     public function edit($id)
     {
         $merek = Merek::findOrFail($id);
-        return view('merk.edit', compact('merek'));
+        return view('merek.edit', compact('merek'));
     }
 
     /**
@@ -78,10 +82,15 @@ class MerkController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $validated = $request->validate([
+        'nama_merek' => 'required',
+         ]);
+
         $merek = Merek::findOrFail($id);
         $merek->nama_merek = $request->nama_merek;
         $merek->save();
-        return radirect()->route('merk.index')->with('success', 'Data berhasil diupdate');
+        return redirect()->route('merek.index')->with('success', 'Data berhasil diupdate');
     }
 
     /**
@@ -94,6 +103,6 @@ class MerkController extends Controller
     {
         $merek= Merek::findOrFail($id);
         $merek->delete();
-         return redirect()->route('merk.index')->with('success', 'data berhasil di hapus');
+         return redirect()->route('merek.index')->with('success', 'data berhasil di hapus');
     }
 }

@@ -1,17 +1,10 @@
+@extends('layouts.dashboard')
+@section('content')
 <body>
 
     <div id="wrapper">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            {{-- NAVBAR --}}
-            @include('layouts.components.header')
-            {{-- /NAVBAR --}}
-
-            {{-- SIDEBAR --}}
-            @include('layouts.components.sidebar')
-            {{-- /SIDEBAR --}}
-        </nav>
+    
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -55,11 +48,11 @@
                                     <div class="mb-2">
                                     <label for="">Foto</label>
                                     <br>
-                                   <img src="{{asset('storage/merk/'. $merk->foto)}}" alt="" style="width: 150px; height: 120px;">
+                                   <img src="{{asset('storage/foto/'. $produk->foto)}}" alt="" style="width: 150px; height: 120px;">
                                    </div>
                                    <div class="mb-2">
                                         <label for="">Id Kategori</label>
-                                        <input type="text" name="id_kategori" class="form-control" value="{{ $produk->id_kategori }}" disabled>
+                                        <input type="text" name="id_merk" class="form-control" value="{{ $produk->id_merek }}" disabled>
                                     </div>
                                     <div>
                                     <br>
@@ -77,3 +70,4 @@
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
+        @endsection

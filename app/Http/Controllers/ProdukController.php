@@ -15,7 +15,7 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        $produk = Produk::latest();
+        $produk = Produk::latest()->get();
         return view('produk.index',compact('produk'));
     }
 
@@ -26,8 +26,9 @@ class ProdukController extends Controller
      */
     public function create()
     {
-        $kategori = Kategori ::latest();
-        return view('produk.create',compact('kategori','merk'));
+        $kategori = Kategori ::all();
+        $merek     = Merek ::all();
+        return view('produk.create',compact('kategori','merek'));
     }
 
     /**
@@ -38,26 +39,33 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        $produk = new Produk;
-        $produk->nama_produk       = $request->nama_produk;
-        $produk->harga = $request->harga;
-        $produk->stok = $request->stok;
-        $produk->id_kategori = $request->id_kategori;
-        if ($request->hasFile('foto')) {
-            $img = $request->file('foto');
-            $name = rand(1000, 9999) . $img->getClientOriginalName();
-            $img->move('storage/buku', $name);
-            $produk->foto = $name;
-        }
-        $produk->id_merek =$request->id_merek;
-        $produk->deskripsi =$request->deskripsi;
+       $validated = $request->validate([
+        'foto'   => 'required|mimes:jpg,png|max:1024',
+        'nama_produk' => 'required|unique:produks',
+        'id_kategori' => 'required',
+        'id_merek'    => 'required',
+        'harga'       => 'required|numeric',
+        'stok'        => 'required|numeric',
+        'deskripsi'   => 'required|string',
+      ]);
 
-        $produk->save();
+       $produk = new Produk;
+       if ($request->hasFile('foto')) {
+           $img = $request->file('foto');
+           $name = rand(1000, 9999). $img->getClientOriginalName();
+           $img->move('storage/foto', $name);
+           $produk->foto = $name;
+           
+       }
+       $produk->nama_produk  =$request->nama_produk;
+       $produk->id_kategori  = $request->id_kategori;
+       $produk->id_merek     =$request->id_merek;
+       $produk->harga        =$request->harga;
+       $produk->stok         =$request->stok;
+       $produk->deskripsi    =$request->deskripsi;
+       $produk->save();
 
-        session()->flash('success', 'data berhasil di tambah');
-
-
-        return redirect()->route('produk.index');
+       return redirect()->route('produk.index');
     }
 
     /**
@@ -82,8 +90,8 @@ class ProdukController extends Controller
     {
         $produk   = Produk::findOrFail($id);
         $kategori = Kategori::all();
-        $merk     = Merk::all();
-        return view('produk.edit', compact('produk','kategori','merk'));
+        $merek     = Merek::all();
+        return view('produk.edit', compact('produk','kategori','merek'));
     }
 
     /**
@@ -95,23 +103,33 @@ class ProdukController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $produk = Produk::findOrFail($id);
-        $produk->nama_produk   =$request->nama_produk;
-        $produk->harga =$request->harga;
-        $produk->stok =$request->stok;
-        $produk->id_kategori =$request->id_kategori;
-        if ($request->hasFile('foto')) {
-            $img = $request->file('foto');
-            $name = rand(1000, 9999) . $img->getClientOriginalName();
-            $img->move('storage/buku', $name);
-            $produk->foto = $name;
-        }
-        $produk->id_merek =$request->id_merek;
-        $produk->deskripsi =$request->deskripsi;
-        $produk->save();
-
-        session()->flash('success', 'data berhasil di update');
-        return redirect()->route('produk.index');
+        $validated = $request->validate([
+            'foto'   => 'required|mimes:jpg,png|max:1024',
+            'nama_produk' => 'required|',
+            'id_kategori' => 'required',
+            'id_merek'    => 'required',
+            'harga'       => 'required|numeric',
+            'stok'        => 'required|numeric',
+            'deskripsi'   => 'required|string',  
+         ]);
+    
+           $produk = Produk::findOrFail($id);
+           if ($request->hasFile('foto')) {
+               $img = $request->file('foto');
+               $name = rand(1000, 9999). $img->getClientOriginalName();
+               $img->move('storage/foto', $name);
+               $produk->foto = $name;
+               
+           }
+           $produk->nama_produk  =$request->nama_produk;
+           $produk->id_kategori  = $request->id_kategori;
+           $produk->id_merek     =$request->id_merek;
+           $produk->harga        =$request->harga;
+           $produk->stok         =$request->stok;
+           $produk->deskripsi    =$request->deskripsi;
+           $produk->save();
+          
+           return redirect()->route('produk.index');
     }
 
     /**

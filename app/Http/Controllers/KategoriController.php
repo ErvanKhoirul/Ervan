@@ -1,10 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Kategori;
-
+use Illuminate\Http\Request;
 
 class KategoriController extends Controller
 {
@@ -15,8 +13,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $kategori = Kategori::latest();
-        return view('kategori.index',compact('kategori')); 
+        $kategori = Kategori::latest()->get();
+        return view('kategori.index', compact('kategori'));
     }
 
     /**
@@ -26,7 +24,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        return view('kategori.create'); 
+        return view('kategori.create');
     }
 
     /**
@@ -37,13 +35,15 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        $kategori = new Kategori;
+        $validated = $request->validate([
+            'nama_kategori' => 'required|unique:kategoris',
+        ]);
+        $kategori                = new Kategori;
         $kategori->nama_kategori = $request->nama_kategori;
-       
+        // dd($request);
         $kategori->save();
         session()->flash('success', 'Data berhasil di tambahkan');
-
-        return redirect()->route('kategori.index'); 
+        return redirect()->route('kategori.index');
     }
 
     /**
@@ -79,10 +79,14 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $kategori = Kategori::findOrFail($id);
+        $validated = $request->validate([
+            'nama_kategori' => 'required',
+        ]);
+        $kategori                = Kategori::findOrFail($id);
         $kategori->nama_kategori = $request->nama_kategori;
         $kategori->save();
-        return radirect()->route('kategori.index')->with('success', 'Data berhasil diupdate');
+        
+        return redirect()->route('kategori.index')->with('success', 'Data berhasil diupdate');
     }
 
     /**
@@ -95,6 +99,6 @@ class KategoriController extends Controller
     {
         $kategori = Kategori::findOrFail($id);
         $kategori->delete();
-         return redirect()->route('kategori.index')->with('success', 'data berhasil di hapus');
+        return redirect()->route('kategori.index')->with('success', 'data berhasil di hapus');
     }
 }

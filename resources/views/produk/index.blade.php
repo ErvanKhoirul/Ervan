@@ -1,5 +1,5 @@
-
-
+@extends('layouts.dashboard')
+@section('content')
 <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -31,6 +31,9 @@
                                             <th scope="col">Harga</th>
                                             <th scope="col">Stok</th>
                                             <th scope="col">Id Kategori</th>
+                                            <th scope="col">Id Merek</th>
+                                            <th scope="col">Foto</th>
+                                            <th scope="col">Deskripsi</th>
                                             <th scope="col">Aksi</th>
                                         </thead>
                                         <tbody>
@@ -42,8 +45,11 @@
                                                 <td scope="row">{{$data->harga}}</td>
                                                 <td scope="row">{{$data->stok}}</td>
                                                 <td scope="row">{{$data->kategori->nama_kategori}}</td>
-                                                
-												<td scope="row">{{$data->merek->nama_merek}}
+												<td scope="row">{{$data->merek->nama_merek}}</td>
+                                                <td>
+                                                <img src="{{asset('storage/foto/'. $data->foto)}}" alt="" style="width: 50px; height: 50px;">
+                                               </td>
+                                               <td scope="row">{{$data->deskripsi}}</td>
 												<td>
                                                     <form action="{{route('produk.destroy', $data->id)}}" method="POST">
                                                     @csrf
@@ -74,3 +80,4 @@
     <!-- /#page-wrapper -->
 
     </div>
+    @endsection
