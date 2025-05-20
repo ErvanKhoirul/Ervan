@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\models\produk;
+use App\Models\Produk;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -11,6 +11,8 @@ class FrontController extends Controller
     $produk = Produk::all();
     return view('welcome', compact('produk'));
     }
+
+    
 
 
 }

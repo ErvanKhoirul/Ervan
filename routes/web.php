@@ -26,6 +26,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 Route::resource('kategori',KategoriController::class);
 Route::resource('produk',ProdukController::class);
 Route::resource('merek',MerekController::class);
+// routes/web.php
+
+
 Route::get('/',function(){
     return view('admin.index');
 });

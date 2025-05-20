@@ -37,7 +37,7 @@
 				</ul>
 				<ul class="header-links pull-right">
 					<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-					<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+					<li><a href="{{ route('login') }}"><i class="fa fa-user-o"></i>My account</a></li>
 				</ul>
 			</div>
 		</div>
@@ -102,7 +102,7 @@
 												<img src="{{asset('user/img/product02.png')}}" alt="">
 											</div>
 											<div class="product-body">
-												<h3 class="product-name"><a href="#">product name goes here</a></h3>
+												<h3 class="product-name"><a href="#">Headset</a></h3>
 												<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
 											</div>
 											<button class="delete"><i class="fa fa-close"></i></button>
@@ -179,7 +179,7 @@
 						
 						<div class="products-tabs">
 							<!-- tab -->
-							<div id="tab1" class="tab-pane active">
+							<div id="tab1" class="tab-panel active">
 								@foreach ($produk as $data)
 								<div class="products-slick" data-nav="#slick-nav-1">
 									<div class="product">
@@ -191,7 +191,7 @@
 											<p class="product-category">Category</p>
 											<h3 class="product-name"><a href="#">{{$data->nama_produk}}</a></h3>
 											<h4 class="product-price"><p>Rp{{ $data->harga }}</p></h4>
-											<h4 class="product-name"><a href="#">{{ $data->id_merek }}</a></h4>
+											<h4 class="product-name"><p href="#">{{ $data->deskripsi }}</p></h4>
 
 											<div class="product-rating">
 												<i class="fa fa-star"></i>
@@ -202,15 +202,16 @@
 											</div>
 											<div class="product-btns">
 
-												<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+												<button class="quick-view"><i class="fa fa-eye"></i><a href="#"><span class="tooltipp">quick view</span></button>
+												
 											</div>
 										</div>
 										<div class="add-to-cart">
 											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 										</div>
 										 </div>
+										 @endforeach
 										</div>
-										@endforeach
 									</div>
 											
 										
@@ -235,6 +236,7 @@
 											</div>
 											<div class="product-btns">
 												<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+									           
 											</div>
 										</div>
 										<div class="add-to-cart">
@@ -243,11 +245,7 @@
 										
 									</div>
 									<!-- /product -->
-
-									
-									
-									
-											
+                                     		
 								</div>
 								<div id="slick-nav-1" class="products-slick-nav"></div>
 							</div>
