@@ -20,6 +20,9 @@ use App\Models\Produk;
 Auth::routes();
 Route::get('/', [FrontController::class, 'index']);
 Route::get('/produk/{id}', [FrontController::class, 'detail'])->name('detail');
+Route::get('about', [FrontController::class, 'about'])->name('about');
+    
+
 
 //Role admin
 Route::prefix('admin')->middleware('auth')->group(function () {

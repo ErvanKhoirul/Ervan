@@ -17,6 +17,11 @@ class FrontController extends Controller
     return view('detail', compact('produk'));
 }
 
+public function about()
+{
+    $produk = Produk::all(); 
+    return view('about', compact('produk'));
+}
 
     
 

@@ -43,8 +43,8 @@
                                                             @csrf
                                                             @method('DELETE')
                                                             <a href="{{route('merek.edit', $data->id)}}" class="btn btn-sm btn-success">Edit</a>
-                                                            <a href="{{route('merek.show', $data->id)}}" class="btn btn-sm btn-warning">Show</a>
-                                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin?')">Delete</button>
+                                                            <a href="{{route('merek.show', $data->id)}}" class="btn btn-sm btn-warning">Tampilkan</a>
+                                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin?')">Hapus</button>
                                                         </form>
                                                     </td>
                                                 </tr>

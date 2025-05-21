@@ -103,8 +103,8 @@
     <div class="container">
         <div id="responsive-nav">
             <ul class="main-nav nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Categories</a></li>
+                <li class="active"><a href="#">Beranda</a></li>
+                <li><a href="{{ route('about') }}">Tentang Kami</a></li>
                 <li><a href="#">Laptops</a></li>
                 <li><a href="#">Smartphones</a></li>
             </ul>

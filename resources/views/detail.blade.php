@@ -21,7 +21,7 @@
 <div id="breadcrumb" class="section">
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="/">Home</a></li>
+            <li><a href="/">Beranda</a></li>
             <li><a href="#">Produk</a></li>
             <li class="active">{{ $produk->nama_produk }}</li>
         </ul>
@@ -62,13 +62,41 @@
                         <span class="product-available">In Stock</span>
                     </div>
                     <p>{{ $produk->deskripsi }}</p>
-                    <a href="https://wa.me/6289530352825?text=Halo,%20saya%20tertarik%20dengan%20produk%20{{ urlencode($produk->nama_produk) }}" 
+                    <a href="https://wa.me/6289530352825?text=Halo,%20saya%20mau%20beli%20produk%20{{ urlencode($produk->nama_produk) }}" 
                         target="_blank" 
                         class="btn btn-success mt-3" 
                         style="display: inline-flex; align-items: center;">
                          <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" style="margin-right: 8px;" alt="WA Logo"/>
                          Pesan di WhatsApp
                      </a>
+                     <!-- Customer Reviews -->
+<div class="section mt-5">
+    <h3>Ulasan Pembeli</h3>
+    <div class="review">
+        <strong>Andi</strong>
+        <div class="product-rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+        </div>
+        <p>Produk sangat bagus dan sesuai deskripsi!</p>
+    </div>
+    <hr>
+    <div class="review">
+        <strong>Siti</strong>
+        <div class="product-rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <p>Pengiriman cepat dan barang berkualitas. Recomended!</p>
+    </div>
+</div>
+
                     <a href="{{ url()->previous() }}" class="btn btn-primary mt-3">Kembali</a>
             </div>
             <!-- /Product Info -->
