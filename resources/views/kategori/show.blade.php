@@ -15,7 +15,7 @@
                         <div class="col-md-10">
                             <div class="card">
                                 <div class="card-header">
-                                    <b>Menampilkan Data Nama Kategori</b>
+                                    <b>Show</b>
                                 </div>
                                 <div class="card-body">
                                     <form action="{{route('kategori.update',$kategori->id)}}" method="POST" enctype="multipart/form-data">

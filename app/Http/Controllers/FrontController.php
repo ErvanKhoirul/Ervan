@@ -11,6 +11,12 @@ class FrontController extends Controller
     $produk = Produk::all();
     return view('welcome', compact('produk'));
     }
+    public function detail($id)
+{
+    $produk = Produk::findOrFail($id);
+    return view('detail', compact('produk'));
+}
+
 
     
 
