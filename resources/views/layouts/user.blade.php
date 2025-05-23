@@ -27,7 +27,7 @@
                 <li><a href="#"><i class="fa fa-map-marker"></i> Bandung</a></li>
             </ul>
             <ul class="header-links pull-right">
-                <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
+
                 <li><a href="#"><i class="fa fa-user-o"></i> My account</a></li>
             </ul>
         </div>
@@ -43,18 +43,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="header-search">
-                        <form>
-                            <select class="input-select">
-                                <option value="0">All Categories</option>
-                                <option value="1">Category 01</option>
-                                <option value="2">Category 02</option>
-                            </select>
-                            <input class="input" placeholder="Search here">
-                            <button class="search-btn">Search</button>
-                        </form>
-                    </div>
+                <form action="{{ route('search') }}" method="GET" class="d-flex mb-4">
+                    <input type="text" name="query" class="form-control me-2" placeholder="Cari produk...">
+                    <button type="submit" class="btn btn-primary">Cari</button>
+                </form>
+                
+                
                 </div>
                 <div class="col-md-3 clearfix">
                     <div class="header-ctn">
@@ -103,10 +97,8 @@
     <div class="container">
         <div id="responsive-nav">
             <ul class="main-nav nav navbar-nav">
-                <li class="active"><a href="#">Beranda</a></li>
+                <li class="active"><a href="{{ route('beranda') }}">Beranda</a></li>
                 <li><a href="{{ route('about') }}">Tentang Kami</a></li>
-                <li><a href="#">Laptops</a></li>
-                <li><a href="#">Smartphones</a></li>
             </ul>
         </div>
     </div>

@@ -21,7 +21,8 @@ Auth::routes();
 Route::get('/', [FrontController::class, 'index']);
 Route::get('/produk/{id}', [FrontController::class, 'detail'])->name('detail');
 Route::get('about', [FrontController::class, 'about'])->name('about');
-    
+Route::get('/search', [App\Http\Controllers\FrontController::class, 'search'])->name('search');
+Route::get('beranda', [App\Http\Controllers\FrontController::class, 'beranda'])->name('beranda');
 
 
 //Role admin
